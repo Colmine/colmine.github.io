@@ -24,6 +24,7 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 ![Random Flare](https://archive-media-0.nyafuu.org/bant/image/1517/35/1517359925961.jpg)
+
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
