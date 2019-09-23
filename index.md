@@ -8,7 +8,7 @@ There's nothing here at the moment, waiting to finish my projects!
 
 ### Major
 
-**Computer Science major, Boise State (2020)**
+**Computer Science Major BS, Boise State (2020)**
 
 *Computational Science and Engineering minor*
 
