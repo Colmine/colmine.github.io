@@ -2,30 +2,18 @@
 
 There's nothing here at the moment, waiting to finish my projects!
 
-### Markdown
+### Projects
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Blank at the moment because I haven't done anything to post here yet!**
 
-```markdown
-Syntax highlighted code block
+### Major
 
-# Header 1
-## Header 2
-### Header 3
+**Computer Science major, Boise State (2020)**
+*Computational Science and Engineering minor*
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
 ![Random Flare](https://archive-media-0.nyafuu.org/bant/image/1517/35/1517359925961.jpg)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
@@ -33,4 +21,8 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**If you need to contact me please use the following methods:**
+  
+School Email: colegilmore@u.boisestate.edu
+Work Email: example@organization.com
+Work Number: 123-456-7890
