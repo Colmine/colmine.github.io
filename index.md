@@ -1,4 +1,4 @@
-## Welcome to my personal work page
+## Welcome To My Personal Work Page
 
 There's nothing here at the moment, waiting to finish my projects!
 
