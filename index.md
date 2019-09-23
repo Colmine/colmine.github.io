@@ -12,6 +12,7 @@ There's nothing here at the moment, waiting to finish my projects!
 
 *Computational Science and Engineering minor*
 
+*This image won't stay here when I can actually use this on resumes*
 
 ![Random Flare](https://archive-media-0.nyafuu.org/bant/image/1517/35/1517359925961.jpg)
 
