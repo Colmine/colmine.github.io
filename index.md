@@ -8,6 +8,10 @@ There's not much here at the moment, waiting to finish more projects!
 
 [GitHub-CS321-PQueue](https://github.com/Colmine/colmine.github.io/tree/master/CS321_PQueue)
 
+**Work-in-progess side scrolling game, personal side project!**
+
+[GitHub-Peronal-Project]
+
 
 ### Major
 
