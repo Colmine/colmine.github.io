@@ -1,4 +1,5 @@
 ## Welcome To My Personal Work Page
+*Cole G. Gilmore*
 
 There's not much here at the moment, waiting to finish more projects!
 
