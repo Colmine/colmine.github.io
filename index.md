@@ -6,7 +6,7 @@ There's not much here at the moment, waiting to finish more projects!
 
 **Simulating a priority queue with a max-heap implementation**
 
-[GitHub](https://github.com/Colmine/colmine.github.io)
+[GitHub-CS321-PQueue](https://github.com/Colmine/colmine.github.io/tree/master/CS321_PQueue)
 
 
 ### Major
