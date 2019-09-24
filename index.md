@@ -17,8 +17,9 @@ There's not much here at the moment, waiting to finish more projects!
 
 **Computer Science Major BS, Boise State (2020-Fall, OR, 2021-Spring)**
 
-*Computational Science and Engineering minor*
+  - *Computational Science and Engineering minor*
 
+*Strongly considering getting a Masters in Computer Science after graduating with a Bachelors* 
 
 ### Support or Contact
 
