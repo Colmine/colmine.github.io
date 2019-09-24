@@ -4,7 +4,7 @@ There's nothing here at the moment, waiting to finish my projects!
 
 ### Projects
 
-**Blank at the moment because I haven't done anything to post here yet!**
+**Blank at the moment because I haven't finished anything to post here yet!**
 
 ### Major
 
@@ -23,6 +23,6 @@ There's nothing here at the moment, waiting to finish my projects!
   
 School Email: colegilmore@u.boisestate.edu
 
-Work Email: example@organization.com
+Personal Email: colegilmore98@gmail.com
 
-Work Number: 123-456-7890
+Personal Phone Number: (253)-224-0114
