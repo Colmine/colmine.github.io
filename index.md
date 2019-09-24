@@ -10,7 +10,7 @@ There's not much here at the moment, waiting to finish more projects!
 
 **Work-in-progess side scrolling game, personal side project!**
 
-[GitHub-Peronal-Project]
+[GitHub-Peronal-Project](https://github.com/Colmine/colmine.github.io/tree/master/Personal_WIP_SideScrollingGame)
 
 
 ### Major
