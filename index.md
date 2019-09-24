@@ -6,11 +6,11 @@ There's not much here at the moment, waiting to finish more projects!
 
 **Simulating a priority queue with a max-heap implementation**
 
-[GitHub-CS321-PQueue](https://github.com/Colmine/colmine.github.io/tree/master/CS321_PQueue)
+[GitHub-CS321-PQueue-(Java)](https://github.com/Colmine/colmine.github.io/tree/master/CS321_PQueue)
 
 **Work-in-progess side scrolling game, personal side project!**
 
-[GitHub-Peronal-Project](https://github.com/Colmine/colmine.github.io/tree/master/Personal_WIP_SideScrollingGame)
+[GitHub-Peronal-Project-(C++)](https://github.com/Colmine/colmine.github.io/tree/master/Personal_WIP_SideScrollingGame)
 
 
 ### Major
