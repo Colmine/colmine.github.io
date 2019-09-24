@@ -6,7 +6,7 @@ There's not much here at the moment, waiting to finish more projects!
 
 **Simulating a priority queue with a max-heap implementation**
 
-https://github.com/Colmine/colmine.github.io
+[GitHub](https://github.com/Colmine/colmine.github.io)
 
 
 ### Major
