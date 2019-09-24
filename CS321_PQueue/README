@@ -142,28 +142,3 @@ will add the first process just fine, but when it gets to adding in a second pro
 to think the array index is now out of bounds. My best guess as to why is how the default constructor
 in MaxHeap() is setup, mainly the assignment of the heapSize variable.
 
-DISCUSSION:
-
-The main issue I encountered during development was getting the maxHeapify() method in
-MaxHeap.java to work properly. I spent a good day trying to figure out why objects weren't
-being properly sorted when the method was called in other methods and why I was getting
-null pointer references. Turns out I had been using the node's .getKey() method rather than
-simply comparing the node's .getKey() value at a given index. I had essentially been comparing
-a node to another node and then just randomly picking one, rather than picking the correct one
-based on its key value. After I got the maxHeapify() method to work not much else turned into a
-problem.
-
-The only other issue encountered was in the last stages of testing over Onyx, where the program
-only runs through completion about 90% of the time without throwing an error at the user. I believe
-I narrowed it down to how the default constructor in maxHeap() is setup/interacts with the methods
-in MaxHeap.java. However, I didn't really have a large amount of time to sit around and run through
-the debugger another thirty plus times, so that issue still remains. I still believe that this
-project was a vast improvement over the first project, for me, though. Really, I'm just glad
-that the majority of the project works and was implemented fairly close to what I believe was
-asked of us. 
-
-
-I think that the only thing I would change would be removing the unused methods in a couple of
-the classes, or having asked more questions during class time to figure out why these methods
-were needed.
- 
