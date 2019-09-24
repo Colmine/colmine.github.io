@@ -1,0 +1,169 @@
+****************
+* Project #2: Priority-Queue
+* Class: CS321 Fall2019
+* Date: 09/20/2019
+* Cole Gilmore
+**************** 
+OVERVIEW:
+
+Takes in generic object types with an associated key value for the object,
+or process, and then orders them within a max heap format. The program will
+then simulate a CPU of sorts and remove the processes/objects from the 
+queue depending on their priority level and length of time to finish them.
+
+
+INCLUDED FILES:
+
+ List of files required for the project with a brief
+ explanation of why each is included.
+
+ * MaxHeap.java - source file, contains all of the methods for the heap
+ 	that PQueue uses to sort, insert, and remove from the queue of processes.
+ * PQueue.java - source file, leverages the methods from MaxHeap.java to
+ 	create a priority based queue, with the highest priority being at the front.
+ * Process.java - source file, creates Process objects that will be sorted by
+ 	MaxHeap.java and PQueue.java, and created in ProcessGenerator.java.
+ * ProcessGenerator.java - source file, generates random values to assign to
+ 	a process before adding the process to the queue.
+	
+(Required Files but NOT Included)
+ * CPUScheduler.java - driver class, reads the arguments from the command line
+	to actually execute the program.
+ * Averager.java - source file, provides methods to CPUScheduler for complete
+	functionality of the program.
+ * HeapNode.java - source file, node class for MaxHeap.java to allow traversal
+	of the heap.
+ 
+ * README - this file
+
+COMPILING AND RUNNING:
+
+ e.g.
+ From the directory containing all source files, compile the
+ driver class (and all dependencies) with the command:
+ (NOTE: CPUScheduler.java, Averager.java, and HeapNode.java are not included as they
+ 	were given to us and we were told not to include them in the submission, but they
+ 	are vital to try and run the program.)
+ 
+ $ javac MaxHeap.java PQueue.java Process.java ProcessGenerator.java 
+ 
+  OR
+ 
+ $ javac *.java
+
+ 
+ Run the compiled class file with the command:
+ $ java CPUScheduler [integer value for maxProcessTime] 
+ 			[integer value for maxPriorityLevel] 
+ 			[integer value for the time until a processes' priority is raised] 
+ 			[integer value for the length of the simulation] 
+ 			[double value from 0 to 1]
+
+ Console output will give the results as the program runs and the total statistics
+ of the run upon completion.
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+General -
+The main organization of the program is to try and contain the majority of the code to
+MaxHeap.java, and follow the UML diagram provided to us. This is because the first project, 
+for me, was incredibly messy and rushed, so, the main goal for this project was to try and 
+keep things more organized and reduce the amount of code duplication. The main algorithm 
+for the MaxHeap.java class, and by extension the PQueue.java class, is the maxHeapify() method. 
+This method performs almost exactly the same as your standard maxHeapify algorithm. Meaning 
+that a value or object is inserted into a heap based structure and it's value is compared 
+to the branches below, and the root above its position. After the comparison is finished the 
+algorithm determines whether the value needs to be moved up or down within the heap. 
+
+MaxHeap.java -
+The majority of MaxHeap.java's methods use the maxHeapify() method to maintain a max heap
+within the array. Meaning the maximum value is at the front of the array and the minimum is
+at a leaf on one of the branches. The only method that differs from this style is the
+second constructor in MaxHeap.java, this is because when using maxHeapify() the program
+runs into null pointer errors. Instead, the second constructor uses a while loop to manually
+sort and promote objects/processes based on their key values. There are two unused methods
+left in the class as they were required in the UML diagram but their purpose was unknown
+other than the possibility that some driver class or test class required them.
+
+PQueue.java -
+The PQueue.java class is essentially a weaker version of the MaxHeap.java class. It has no
+unique methods and simply uses calls to the MaxHeap.java methods. The main reason for this
+class is to provided a go-between for CPUScheduler.java, Process.java, and ProcessGenerator.java.
+
+Process.java -
+The organization for Process.java was to simply follow the UML diagram provided to us
+to keep things fairly neat and linear. This class is essentially just a bunch of getter and
+setter methods for creating a Process object. As well as a constructor to create a Process
+object for ProcessGenerator.java, which will randomly assign values to the new processes' 
+variables. There are also four unused methods in the class as I was unsure of where or how
+to use them, these methods were required in the UML diagram so I'd assume they are needed
+by the driver class.
+
+ProcessGenerator.java -
+For this class the main purpose was to generate random values, such as double and integer values,
+for a new Process object. After a new process has been created it will take the randomly
+generated process and stick it into the priority queue/heap when called in the main class, 
+CPUScheduler.java. Again, the main organization and requirements for this class were laid
+out in the UML diagram provided to us. There is a method that remains unused within the class
+as I couldn't really think of when or how it should be used other than by an outside class, which
+doesn't make much sense as it was required to be a private method.
+
+
+Conclusion -
+The only issues I encountered during the creation of these classes was in the use of the
+default MaxHeap() constructor. When CPUScheduler is run over a command line there is a very
+high chance that you will get an ArrayIndexOutOfBoundsException: Index 0 is out of bounds
+for length 0. This is likely caused by the fact that the default constructor sets the heapSize 
+variable to 0 when instantiated. When I tried to go back and fix this issue by simply setting
+heapSize to 1 for the default constructor the class failed all of the test cases for an
+empty heap.
+
+ 
+UML Diagram: http://cs.boisestate.edu/~cs321/projects/p-queue/files/PQueueUML.png
+
+TESTING:
+
+The testing process for this program was to check every method against the tests provided
+to us through TestNG before trying to integrate another method. The process was a fairly
+standard one, make sure the tests pass for an empty heap, then a small heap, and then a large
+heap. After the methods for HeapMax.java were all passing for the test suite it was just a
+matter of moving onto the PQueue.java class. Implementing and running the test suite for that
+class in the same fashion as MaxHeap.java. After both of those classes were passing all of
+the test cases I implemented the Process.java and ProcessGenerator.java classes. Before testing
+the program over the command line I made a simple test class to make sure all of the methods in
+Process.java and ProcessGenerator.java were working correctly and assigning values with how
+I believe they should be.
+
+Once all of the classes were implemented and tested against the test suite I moved over
+to Onyx and testing the program with some command line inputs and the provided run_test file.
+This is the only area where I believe an issue/bug is still present. The program will run and
+complete the program test about 80-90% of the time. When a process gets added to the queue it
+will add the first process just fine, but when it gets to adding in a second process it seems
+to think the array index is now out of bounds. My best guess as to why is how the default constructor
+in MaxHeap() is setup, mainly the assignment of the heapSize variable.
+
+DISCUSSION:
+
+The main issue I encountered during development was getting the maxHeapify() method in
+MaxHeap.java to work properly. I spent a good day trying to figure out why objects weren't
+being properly sorted when the method was called in other methods and why I was getting
+null pointer references. Turns out I had been using the node's .getKey() method rather than
+simply comparing the node's .getKey() value at a given index. I had essentially been comparing
+a node to another node and then just randomly picking one, rather than picking the correct one
+based on its key value. After I got the maxHeapify() method to work not much else turned into a
+problem.
+
+The only other issue encountered was in the last stages of testing over Onyx, where the program
+only runs through completion about 90% of the time without throwing an error at the user. I believe
+I narrowed it down to how the default constructor in maxHeap() is setup/interacts with the methods
+in MaxHeap.java. However, I didn't really have a large amount of time to sit around and run through
+the debugger another thirty plus times, so that issue still remains. I still believe that this
+project was a vast improvement over the first project, for me, though. Really, I'm just glad
+that the majority of the project works and was implemented fairly close to what I believe was
+asked of us. 
+
+
+I think that the only thing I would change would be removing the unused methods in a couple of
+the classes, or having asked more questions during class time to figure out why these methods
+were needed.
+ 
