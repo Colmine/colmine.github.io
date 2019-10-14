@@ -1,4 +1,6 @@
 package HeapQueue;
+
+
 /*
  * Project #2: Priority-Queue
  * Class: CS321 Fall-2019
@@ -40,9 +42,17 @@ public class MaxHeap<T> {
 	
 	@SuppressWarnings("unchecked")
 	public MaxHeap(T[] pArray, int[] intArray) {
+		//This condition check is required to make sure that during tests things don't break when
+			//no processes are passed in but this constructor gets called.
+		if(pArray.length == 0) {
+			capacity = DEFAULT_CAPACITY;
+			heapSize = 0;
+			heap = (HeapNode<T>[]) new HeapNode[capacity];
+		} else {
 		heap = (HeapNode<T>[]) new HeapNode[pArray.length];
 		heapSize = pArray.length;
 		capacity = intArray.length;
+		
 		//Adding the processes/objects passed through the constructor to the array.
 		for(int i = 0; i < pArray.length; i++) {
 			heap[i] = new HeapNode<T>(pArray[i], intArray[i]);
@@ -61,6 +71,7 @@ public class MaxHeap<T> {
 					}
 				}	
 			}
+		}
 		}
 	}
 	
@@ -120,15 +131,10 @@ public class MaxHeap<T> {
 		if(heapSize == capacity) {
 			expandCapacity();
 		}
-		if(heapSize == 0) {
-			heapSize++;
-			heap[0] = new HeapNode<T>(process, i);
-		} else {
 		HeapNode<T> temp = new HeapNode<T>(process, i);
 		heap[heapSize] = temp;
 		maxHeapify(parent(heapSize)); //fixing the ordering to maintain a maxHeap
 		heapSize++;
-		}
 	}
 	
 	
