@@ -1,7 +1,7 @@
 ****************
 * Project #2: Priority-Queue
 * Class: CS321 Fall2019
-* Date: 09/20/2019
+* Date: 09/27/2019
 * Cole Gilmore
 **************** 
 OVERVIEW:
@@ -25,6 +25,7 @@ INCLUDED FILES:
  	MaxHeap.java and PQueue.java, and created in ProcessGenerator.java.
  * ProcessGenerator.java - source file, generates random values to assign to
  	a process before adding the process to the queue.
+ * README - this file, explains organization and workings within the program
 	
 (Required Files but NOT Included)
  * CPUScheduler.java - driver class, reads the arguments from the command line
@@ -34,11 +35,10 @@ INCLUDED FILES:
  * HeapNode.java - source file, node class for MaxHeap.java to allow traversal
 	of the heap.
  
- * README - this file
+
 
 COMPILING AND RUNNING:
 
- e.g.
  From the directory containing all source files, compile the
  driver class (and all dependencies) with the command:
  (NOTE: CPUScheduler.java, Averager.java, and HeapNode.java are not included as they
@@ -111,13 +111,12 @@ doesn't make much sense as it was required to be a private method.
 
 Conclusion -
 The only issues I encountered during the creation of these classes was in the use of the
-default MaxHeap() constructor. When CPUScheduler is run over a command line there is a very
+MaxHeap() constructors. When CPUScheduler is run over a command line there was a very
 high chance that you will get an ArrayIndexOutOfBoundsException: Index 0 is out of bounds
-for length 0. This is likely caused by the fact that the default constructor sets the heapSize 
-variable to 0 when instantiated. When I tried to go back and fix this issue by simply setting
-heapSize to 1 for the default constructor the class failed all of the test cases for an
-empty heap.
-
+for length 0. This was caused by the fact that in CPUScheduler there's an issue in the update() 
+method as it effectively calls the MaxHeap(T[] array, int[] array) constructor with 0 and 0, rather
+than the default constructor. So, unless you have this odd conditional check to make sure that
+someone isn't passing in empty arrays, during the use of CPUScheduler your program will break.
  
 UML Diagram: http://cs.boisestate.edu/~cs321/projects/p-queue/files/PQueueUML.png
 
@@ -136,9 +135,43 @@ I believe they should be.
 
 Once all of the classes were implemented and tested against the test suite I moved over
 to Onyx and testing the program with some command line inputs and the provided run_test file.
-This is the only area where I believe an issue/bug is still present. The program will run and
-complete the program test about 80-90% of the time. When a process gets added to the queue it
-will add the first process just fine, but when it gets to adding in a second process it seems
-to think the array index is now out of bounds. My best guess as to why is how the default constructor
-in MaxHeap() is setup, mainly the assignment of the heapSize variable.
+This is the only area where I believe an issue/bug was ecountered that wasn't due to incorrect
+implementation on my part. The program would run and break about 99% of the time. When a process 
+got added to the queue it would add the first process just fine, but when it gets to adding in a 
+second process it would break. I initially thought this was due to an incorrect array index being 
+passed in that was now out of bounds. It turns out this was partially correct, the CPUScheduler
+class would call the update() method in CPUScheduler and pass in the values for an empty array. 
+This would then create a new MaxHeap with a capacity of 0, essentially an empty heap with no room
+for any insertions. To fix this, a conditional check was added to the MaxHeap(T[] array, int[] array)
+constructor to check if the arrays passed as parameters were empty or not.
 
+DISCUSSION:
+
+The main issue I encountered during development was getting the maxHeapify() method in
+MaxHeap.java to work properly. I spent a good day trying to figure out why objects weren't
+being properly sorted when the method was called in other methods and why I was getting
+null pointer references. Turns out I had been using the node's .getKey() method rather than
+simply comparing the node's .getKey() value at a given index. I had essentially been comparing
+a node to another node and then just randomly picking one, rather than picking the correct one
+based on its key value. After I got the maxHeapify() method to work not much else turned into a
+problem.
+
+The only other issue encountered was in the last stages of testing over Onyx, where the program
+would break about 90% of the time throwing an error at the user. I initially believed it to be how 
+the default constructor in maxHeap() is setup/interacts with the methods in MaxHeap.java. However, 
+after running through the debugger multiple times over the course of a few days I found that the
+error was contained in the CPUScheduler's update() method and the second constructor in MaxHeap,
+as stated previously, the update() method would pass in 0 for the two parameters, creating a heap
+without the ability to add anything without getting an error. To fix this, a conditional check
+was needed to make sure that the arrays passed into this constructor weren't empty/0. I still 
+believe that this project was a vast improvement over the first project, for me that is. Really, 
+I'm just glad that the project works now and was implemented fairly close to what I believe was
+asked of us. 
+
+
+I think that the only thing I would change would be removing the unused methods in a couple of
+the classes, or having asked more questions during class time to figure out why these methods
+were needed. My assumption on why they were needed was to enforce encapsulation but I don't believe
+there should be anyway to break encapsulation as the PQueue class is essentially making a copy of
+the MaxHeap and calling its methods on the PQueue instance.
+ 
