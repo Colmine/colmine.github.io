@@ -10,8 +10,6 @@
  * of nodes, removal of nodes, sorting, and finding where in the heap something might be
  * located.
  * 
- * NOTE: there seems to be an issue when running the driver class, CPUScheduler, as I believe
- * the default constructor, WITH NOTHING INSERTED UPON CREATION, doesn't like that heapSize is 0.
  *
  * @author Cole Gilmore
  *
