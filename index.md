@@ -10,9 +10,11 @@ There's not much here at the moment, waiting to finish more projects!
 [GitHub-CS321-PQueue-(Java)](https://github.com/Colmine/colmine.github.io/tree/master/CS321_PQueue)
 
 **Creating a hash table to store objects and then access them**
+
 [GitHub-CS321-HashTable(Java)](https://github.com/Colmine/colmine.github.io/tree/master/HashTable)
 
 **Simulation of writing objects from memory onto a hard drive, using a B-Tree**
+
 [GitHub-CS321-B-Tree(Java)](https://github.com/Colmine/colmine.github.io/tree/master/BTree)
 
 **Work-in-progess side scrolling game, personal side project!**
