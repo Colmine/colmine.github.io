@@ -1,0 +1,143 @@
+****************
+* Project #4: B-Trees
+* Class: CS321 - Fall 2019
+* Date: 12/13/2019
+* Names: Edward Kourbanov
+		Jeong Boo
+		John Martin
+		Cole Gilmore
+**************** 
+
+OVERVIEW:
+	This program creates node objects which are then filled with key values determined
+	from specific string sequences. These node objects are then used to insert the key
+	values into a B-Tree, which is then written to a binary file (to simulate writing to a disk).
+	The B-Tree can then be searched to find specific string sequences by examining the key
+	values in the B-Tree which are then returned, if debug was selected, in a human readable 
+	file.
+
+
+INCLUDED FILES:
+
+Files required, and included, to run the project:
+
+ * BTree.java - Contains all of the methods, and structure, to make
+ 	a BTree as well as generate the file(s) for any object/key 
+ 	that gets stored in the BTree. Also, contains methods to add, remove,
+ 	and printout the BTree. Also contains methods to see if a specific 
+ 	object/key are in the table, and how many times it shows up. 
+ 	 
+ * TreeNode.java - Contains the methods needed to store TreeObjects into a node
+	format for easy traversing of the BTree. Holds values to easily find the node
+	within the BTree's file.
+ 
+ * TreeObject.java - Simple node class, stores long key values of a specific
+	object/string, as well as its frequency value in the B-Tree. Contains
+	a simple compareTo() method used to determine if two objects are the same.
+	
+ * GeneBankCreateBTree.java -  This class will read the input file parsing it into the binary strings that will 
+ used in the B-Tree. It also will call insert to pass the values into the BTree
+ 
+ * GeneBankSearch.java - This class takes in a query file and binary file. It will then search the binary file 
+ for the queries that are specified by the query file. It then outputs the results to the 
+ console
+ 
+ * README - Explanation of the design of the program as well as any issues
+ 	still present in the program.
+	
+	
+Files not required, but included, to run the project:
+
+ * TestCase.java - Testing suite that contains all objects, values, and methods used
+	to test the classes.
+	
+ * TreeObjectTest_x_... - Tests for the TreeObject class and all its methods
+	
+ * TreeNodeTest_x_... - Tests for the TreeNode class and all its methods
+	
+ * BTreeTest_x_... - Tests for the BTree class and all its methods
+ 
+ * *.xml - XML documents to allow running of Test files on the given classes
+ 
+ 
+	
+COMPILING AND RUNNING:
+
+ From the directory containing all source files, compile the
+ driver class (and all dependencies) with the command:
+ $ javac BTree.java TreeObject.java TreeNode.java GeneBankCreateBTree.java GeneBankSearch.java
+ OR
+ $ javac *.java
+
+ Run the compiled class files with the commands:
+ $ java GeneBankCreateBTree [0 | 1(no/with Cache] [degree] [gbk file] [sequence length] [ | cache size] [ | debug level]
+	
+ $ java GeneBankSearch [0 | 1(no/with Cache)] [btree file] [query file] [ | cache size] [ | debug level]
+ 
+ Console output will give the results after the program finishes, if debug was selected, otherwise
+ output will be in a file in the same directory.
+ 
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+	This program is used for looking at a certain subsequence for a DNA sequence. The input file that is passed in 
+	is parsed into the subsequence of the specified length. This is then inserted and stored in a random access binary 
+	file that is used to hold all of the parts of the b-tree. The insertion of the values is somewhat complicated process 
+	to make sure that the file has all of the nodes in the right order to be able to be searched affectively. Only new 
+	sub-sequences are stored in the file There also is possibility to be able to see all of the information in the binary 
+	file printed in an in order traversal in a file called dump. That file is mainly for debug purposes. On the other end, 
+	the search class can be used to look through the class for a certain subsequence. This class takes in a binary file to 
+	search and a series of sequences that need to be searched. This class will then output if the query is in the file or not. 
+	If it is contained in the file the the frequency of that sequence will be output. 
+
+
+TESTING SUITE DESIGN:
+
+	Regarding the design and setup of the entirety of the testing suite, the majority of the
+	organization was based off the previous test files we were given and their layouts. As for the
+	absurd amount of TreeObjects contained within the TestCase file, I was wanting to include more
+	tests but ran out of time so about half of the strings were left unused. The driving force
+	behind the format of the files was to try and keep everything easily readable, and neat. 
+	This was due to the fact of knowing I'd have to alter things so it would be especially nice
+	to be able to find everything very quickly, as well as maintaining good documentation
+	to determine what needs to get input and what will be used for comparison.
+  
+
+
+
+
+TESTING:
+
+	For testing the program the main method that was used was testing the classes with
+	the sample gene bank files we were provided with. The parameters were passed into eclipse
+	to allow for testing with various files and inputs to check if the files were what was 
+	expected. The other method of testing was with our Testing suite, however, this method
+	wasn't as useful; as we altered the classes and methods so many times that they weren't
+	working/giving the correct output for the majority of the project deadline. Aside from
+	that major hiccup the testing covered multiple levels of degrees, different B-Tree heights,
+	valid and invalid object insertions/deletions and every other method(s) contained in
+	the various classes. There are still some issues with running the tests multiple times
+	in succession as the files used for testing will overflow and give false results, the
+	only known fix is either clearing the files each time or changing the file names.
+
+
+DISCUSSION:
+
+	The first issue that was run into with making the testing suite and classes was just trying
+	to figure out how the TestNG library even does comparisons. After a lot of documentation
+	reading and seeing how it works, I found it does deep comparisons for arrays, but object comparisons
+	for things like the TreeNode and TreeObject classes. After figuring out how the comparisons 
+	worked it was more a matter of making sure the tests were testing the right thing, than anything.
+	The other major issue was the constant changing nature of the class files, which was to be
+	expected in a group project like this. Going back and changing the files, and methods, and
+	what they should expect, or do, consumed a lot of time. Even with starting the test files 
+	early and then setting up tests for the first major states, most ended up being gutted as
+	the classes changed and what we were looking for, and how, changed. As for something that
+	is believed to still be an issue with the testing side, would be the writing to and from the files.
+	If the tests are run multiple times without clearing the files used in the testing suite
+	you will get false results, either good or bad depending on what changed in the methods between your two
+	test runs. Other than that all I can say is that I wish we had more time, even though this project
+	was almost a month long, I would have loved for more time. This project took significant amount time 
+	debugging to get all of it working correctly. This added to the complication for the test classes.
+	Overall this project takes significant amount of time get it all to work together.
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TreeNode Testing Suite">
+
+  <test name="TreeNode Tests" verbose="2"> 
+    <classes>     
+      <class name="TreeNodeTest_1_emptyNode"/>
+      <class name="TreeNodeTest_2_oneObjInNode"/>
+      <class name="TreeNodeTest_3_twoObjInNode"/>
+      <class name="TreeNodeTest_4_threeObjInNode"/>
+      <class name="TreeNodeTest_5_fourObjInNode"/>      
+      <class name="TreeNodeTest_6_fiveObjInNode"/> 
+      <class name="TreeNodeTest_7_sixObjInNode"/>      
+    </classes>
+  </test> <!-- TreeNode Tests -->
+   
+</suite> <!-- TreeNode Testing Suite -->

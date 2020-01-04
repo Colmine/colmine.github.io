@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="B-Tree Testing Suite">
+
+  <test name="B-Tree Tests with Default Settings" verbose="2">
+    <classes>     
+      <class name="BTreeTest_0_newTable_default"/>
+      
+      <class name="BTreeTest_a_emptyBTree_insertA_A_default"/>
+      <class name="BTreeTest_b_emptyBTree_insertT_T_default"/>
+      <class name="BTreeTest_c_emptyBTree_insertG_G_default"/>
+      <class name="BTreeTest_d_emptyBTree_insertC_C_default"/> 
+            
+      <class name="BTreeTest_e_insert16_16_default"/>  
+      
+      <class name="BTreeTest_g_insert32_32_default"/>
+     
+    </classes>
+  </test> <!-- B-Tree Tests with Default Settings -->
+  
+</suite> <!-- B-Tree Testing Suite -->

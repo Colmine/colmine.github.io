@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TreeObject Testing Suite">
+
+  <test name="TreeObject Tests" verbose="2"> 
+    <classes>     
+      <class name="TreeObjectTest_1_string"/>
+      <class name="TreeObjectTest_2_long"/>
+      <class name="TreeObjectTest_3_integer"/>
+      <class name="TreeObjectTest_4_double"/>
+      <class name="TreeObjectTest_5_float"/>      
+      <class name="TreeObjectTest_6_character"/> 
+      <class name="TreeObjectTest_7_boolean"/>      
+      <class name="TreeObjectTest_8_byte"/> 
+    </classes>
+  </test> <!-- TreeObject Tests -->
+   
+</suite> <!-- TreeObject Testing Suite -->

@@ -1,0 +1,83 @@
+Test.txt
+BTree Project, CS321
+Edward Kourbanov
+Jeong Boo
+John Martin
+Cole Gilmore
+
+1 - TreeObject Class
+	For the TreeObject class the tests that will be run to ensure the class
+	is running correctly are tests on each method, as well as each primitive
+	data type that could be stored within the object. This means the tests
+	currently setup to test the TreeObject class include tests on the contrustor,
+	as well as the getLeaf, setLeaf, getValue, setValue, getKey, setKey, and 
+	toString methods. All of these tests are run on the data types of:
+	character, string, int, long, float, double, boolean, and byte data types.
+	As this is a fairly simple single node class, i.e. is only to setup/alter
+	a single node and not a group of nodes, these tests are just to make sure
+	the getter and setter methods, as well as the constructor works. There
+	isn't a whole lot that can be tested as the tests are just to make sure
+	that if a method gets called you get the correct output or are able to change
+	a value stored in the object.
+	
+2 - TreeNode Class
+	For the TreeNode class the tests that will be run to ensure the class is
+	operating correctly are, again, tests on each method and with varying sizes
+	of Nodes. As we have yet to fully complete the TreeNode class, this testing
+	suite might not be complete; however, we believe we have all the methods we will
+	need for the project. The tests that will be run will be on Nodes of size 0-6,
+	as there shouldn't be anything new that will pop-up past node sizes of 4 but I
+	believe that we should still test up to 6 just to be safe. These tests will
+	check the setLeaf, getLeaf, setCount, getCount, setSize, getSize, setKeys, getKeys,
+	setDegree, getDegree, addChild, getChildren, addToNode, remFromNode, and removeChild
+	methods. These tests will be run with two different kinds of object types, one
+	with character TreeObjects and the other with string TreeObjects. Why we
+	believe that these test sets should cover all the possible situations is they
+	should cover essentially any kind of input the user might enter on the command
+	line, such as sequence lengths of 1-31, and the varying degree inputs from
+	the user. 
+	
+3 - BTree Class
+	For the BTree class the tests that will be run to ensure the class is working
+	correctly are tests with two different kinds of TreeObjects, one set with
+	Character TreeObjects, and the other with String TreeObjects. These types of
+	TreeObjects will be run with tests on each method within the class, as well
+	as varying degree sizes and heights of the BTree. The methods tested will be,
+	he constructors, create, insert, search, delete, debug, getRoot, setRoot, isEmpty,
+	getSize, incSize, getHeight, getDegree, setDegree, getCapacity, setCapacity,
+	getSeqLength, setSeqLength, getFrequency, incrementFreq, and the getStorage methods.
+	The reason as to why there is no equals override/test for this class as, after much
+	headache, I found that there is no feasible way to override the equals method
+	to do a deep comparison of two arrays for Java. To do what I would need to do
+	on the two arrays I'd have to run both arrays through a loop and keep calling the
+	equals method to verify their equality. The workaround that I found was to simply 
+	use the Arrays.equals method already present in Java and then do an 
+	Assert.assertequals call on two boolean variables to verify if the outcome is what 
+	it should be. As for the different levels/heights of the BTree that will be 
+	tested these will be from heights of 0-3, as all the possible situations that 
+	might be encountered within the tree, such as adding or deleting an internal 
+	node, will occur in a BTree of height 3. All of these tests should ensure that
+	the BTree class is working correctly as it will check essentially all of the
+	different possible inputs that the user might enter on the commandline.
+	
+4 + 5 - GeneBankCreateBTree and GeneBankSearch Classes
+	To test these classes, as it's assumed the other 3 classes are functioning correctly
+	at this point, I will be using one of the SampleInput files that we were provided.
+	Then I will be checking the structure of the BTree, as well as using some simple
+	sequences to verify that these classes are not only formatting the data in the files
+	correctly, but also checking the entriety of the Tree for the given sequences. As
+	I have to go back and add more tests for the TreeNode class, as well as alter the
+	BTree tests, as we only recently implemented the TreeNode class and my tests are
+	not setup to use the TreeNode class. I have not been able to fully flesh out
+	the complete set of methods and tests that will be used to check these main classes.
+	However, as the previous classes should be working properly it will just be a matter
+	of calling certain methods, mainly the create, insert, and search BTree methods, 
+	and making sure that the outputs are setup correctly, as well as making sure the 
+	file and sequences are correct for the calls made on the sample files. It should 
+	be noted that there will also be multiple sets of outputs for different sequence 
+	lengths, specifically expected outputs for sequences of lengths 1-6. As these sequence
+	lengths should cover just about any kind of character sequence that would be found
+	in the file, just in a shorter format. It's important to note that my hopes were far
+	too high for getting these tests done, I say this because I ended up running out of time
+	and was unable to implement any kind of testing/expected output file for these two
+	classes.
