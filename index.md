@@ -1,8 +1,5 @@
-## Default Blog Page
+## Neural Networks Blog Page
 *Cole G. Gilmore*
-
-
-### Blog
 
 ### Overview
 Neural Networks, sounds simple to most of us, it’s what our brains essentially are, right? Well, yes and no. Yes, a neural network is something that is modeled after our brains and the neuron connections within them. No to the point that our brains are a neural network, they are far more complex than that.  However, that is a good base line to start from when trying to figure out just what a neural network is and how deep learning ties into it. Truthfully, neural networks are simply an incredibly complex math equation that gives weighting to certain things over others.  Knowing that, let’s take a brief look at where and when neural networks were first put into use. Firstly, neural networks were first proposed back in 1944 by Warren McCullough, and Walter Pitts, both of whom were researchers at the University of Chicago, and both of whom later moved to MIT in 1952 to later found the first cognitive science department. This department would later evolve into what we know commonly as the MIT Artificial Intelligence Laboratory. However, the department would experience a few lulls in its journey, as with all computer science, someone would stumble upon the idea and consider it a revolutionary field and then reach their limits with the technology and ditch the idea as a whole. Only for the idea to be rediscovered about ten years later by another computer scientist, and then rinse and repeat ad nauseam. With that out of the way, there are countless different avenues to take when discussing neural networks and deep learning, but the focus will remain on what is a neural network, and how does deep learning impact a neural network. 
