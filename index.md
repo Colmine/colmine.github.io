@@ -17,6 +17,7 @@ Before I can discuss deep learning you need to know about gradient descent. Grad
 ### References And Resources
 
 (Very intersting research paper on neural networks, primary resource for posting!)
+
 Schmidhuber, Jürgen (2015). Deep learning in neural networks: An overview. Neural Networks, 61(), 85–117. doi:10.1016/j.neunet.2014.09.003 
 (https://sci-hub.scihubtw.tw/10.1016/j.neunet.2014.09.003)
         
