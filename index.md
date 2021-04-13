@@ -16,11 +16,15 @@ Before I can discuss deep learning you need to know about gradient descent. Grad
 
 ### References And Resources
 
-Schmidhuber, Jürgen (2015). Deep learning in neural networks: An overview. Neural Networks, 61(), 85–117. doi:10.1016/j.neunet.2014.09.003 (https://sci-hub.scihubtw.tw/10.1016/j.neunet.2014.09.003)
+(Very intersting research paper on neural networks, primary resource for posting!)
+Schmidhuber, Jürgen (2015). Deep learning in neural networks: An overview. Neural Networks, 61(), 85–117. doi:10.1016/j.neunet.2014.09.003 
+(https://sci-hub.scihubtw.tw/10.1016/j.neunet.2014.09.003)
         
+What is a neural network? (Lots of math)
 [![What is a Neural Network](https://img.youtube.com/vi/aircAruvnKk/0.jpg)](https://youtu.be/aircAruvnKk)
 
-
+How does a neural network determine accuracy? (Also a lot of math)
 [![Gradient Descent](https://img.youtube.com/vi/IHZwWFHWa-w/0.jpg)](https://youtu.be/IHZwWFHWa-w)
 
+Neural network in action (Almost no math)
 [![Deep Learning Super Mario](https://img.youtube.com/vi/qv6UVOQ0F44/0.jpg)](https://youtu.be/qv6UVOQ0F44)
